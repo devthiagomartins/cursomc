@@ -24,7 +24,8 @@ public class Estado implements Serializable{
 	private String nome;
 	
 	@JsonBackReference
-	@OneToMany(mappedBy = "estado")
+	@OneToMany(mappedBy = "estado")                   //Um estado tem varias cidades
+													 //mappedBy = "quem foi o atributo que mapeou o ManyToOne do outro lado?"
 	private List<Cidade> cidades = new ArrayList<>();
 	
 	

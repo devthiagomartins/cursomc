@@ -24,8 +24,9 @@ public class Cidade implements Serializable{
 	private String nome;
 	
 	@JsonManagedReference
-	@ManyToOne
-	@JoinColumn(name = "estado_id")
+	@ManyToOne                       //Muitas cidades para Um estado 
+	@JoinColumn(name = "estado_id")  //Nome do campo da chave estrangeira no banco - a cidade que possui um estado, 
+	                                 //logo queremos saber qual o id do Estado dela.
 	private Estado estado;
 	
 	public Cidade() {

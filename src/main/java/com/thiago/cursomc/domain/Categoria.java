@@ -23,7 +23,7 @@ public class Categoria implements Serializable{
 	private String nome;
 	
 	@JsonManagedReference
-	@ManyToMany(mappedBy = "categorias")
+	@ManyToMany(mappedBy = "categorias")        //Atributo feito no ManyToMany do outro lado
 	private List<Produto> produtos = new ArrayList<>();
 	
 	

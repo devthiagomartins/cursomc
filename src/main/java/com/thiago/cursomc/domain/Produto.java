@@ -28,9 +28,9 @@ public class Produto implements Serializable{
 	
 	@JsonBackReference
 	@ManyToMany
-	@JoinTable(name = "PRODUTO_CATEGORIA",
-		joinColumns = @JoinColumn(name = "produto_id"),
-		inverseJoinColumns = @JoinColumn(name = "categoria_id")
+	@JoinTable(name = "PRODUTO_CATEGORIA",                       //JoinTable > vai fazer os muitos para muitos no BD. name="nome da relacao"															
+		joinColumns = @JoinColumn(name = "produto_id"),			 //JoinColumns > nome do campo da tabela correspondente ao id da classe atual(fk).
+		inverseJoinColumns = @JoinColumn(name = "categoria_id")  //nome da fk que vai referenciar a categoria
 			)
 	private List<Categoria> categorias = new ArrayList<>();
 	
